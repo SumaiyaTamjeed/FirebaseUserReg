@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -9,24 +10,15 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="sue.example.com.firebaseuserreg.MainActivity"
-    android:padding="20dp">
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/emailfield"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="20dp"
-        android:hint="Email" />
+    android:padding="20dp"
+    android:background="@color/colorPrimary">
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
+        android:background="@drawable/input_background"
         android:layout_below="@+id/emailfield"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
@@ -41,4 +33,25 @@
         android:id="@+id/loginbutton"
         android:layout_below="@+id/passwordfield"
         android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/logo"
+        android:id="@+id/logoImage"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/emailfield"
+        android:background="@drawable/input_background"
+        android:layout_marginTop="40dp"
+        android:hint="Email"
+        android:layout_below="@+id/logoImage"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
